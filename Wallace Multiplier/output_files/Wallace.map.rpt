@@ -1,0 +1,432 @@
+Analysis & Synthesis report for Wallace
+Fri Aug 20 18:17:56 2021
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |Dutwrapper
+ 10. Parameter Settings for User Entity Instance: Wallace:R1
+ 11. Port Connectivity Checks: "Wallace:R1|RCA24:RC0|RCA12:R1"
+ 12. Port Connectivity Checks: "Wallace:R1"
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                          ;
++-------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status         ; Successful - Fri Aug 20 18:17:55 2021           ;
+; Quartus II 64-Bit Version           ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                       ; Wallace                                         ;
+; Top-level Entity Name               ; Dutwrapper                                      ;
+; Family                              ; Cyclone V                                       ;
+; Logic utilization (in ALMs)         ; N/A                                             ;
+; Total registers                     ; 49                                              ;
+; Total pins                          ; 50                                              ;
+; Total virtual pins                  ; 0                                               ;
+; Total block memory bits             ; 0                                               ;
+; Total DSP Blocks                    ; 0                                               ;
+; Total HSSI RX PCSs                  ; 0                                               ;
+; Total HSSI PMA RX Deserializers     ; 0                                               ;
+; Total HSSI PMA RX ATT Deserializers ; 0                                               ;
+; Total HSSI TX PCSs                  ; 0                                               ;
+; Total HSSI PMA TX Serializers       ; 0                                               ;
+; Total HSSI PMA TX ATT Serializers   ; 0                                               ;
+; Total PLLs                          ; 0                                               ;
+; Total DLLs                          ; 0                                               ;
++-------------------------------------+-------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
+; Top-level entity name                                                           ; Dutwrapper         ; Wallace            ;
+; Family name                                                                     ; Cyclone V          ; Cyclone IV GX      ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                       ; Off                ; Off                ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization                                                    ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Synthesis Seed                                                                  ; 1                  ; 1                  ;
+; Automatic Parallel Synthesis                                                    ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                     ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                       ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
+; Wallace.v                        ; yes             ; User Verilog HDL File  ; C:/Users/Tanuj/Desktop/16 bit Wallace/Wallace.v    ;         ;
+; Dutwrapper.v                     ; yes             ; User Verilog HDL File  ; C:/Users/Tanuj/Desktop/16 bit Wallace/Dutwrapper.v ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 169       ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 223       ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 110       ;
+;     -- 5 input functions                    ; 36        ;
+;     -- 4 input functions                    ; 29        ;
+;     -- <=3 input functions                  ; 48        ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 49        ;
+;                                             ;           ;
+; I/O pins                                    ; 50        ;
+; Total DSP Blocks                            ; 0         ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 49        ;
+; Total fan-out                               ; 1257      ;
+; Average fan-out                             ; 3.38      ;
++---------------------------------------------+-----------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                     ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                               ; Library Name ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------------+--------------+
+; |Dutwrapper                ; 223 (0)           ; 49 (49)      ; 0                 ; 0          ; 50   ; 0            ; |Dutwrapper                                       ; work         ;
+;    |Wallace:R1|            ; 223 (7)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1                            ; work         ;
+;       |FA:f101|            ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f101                    ; work         ;
+;       |FA:f102|            ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f102                    ; work         ;
+;       |FA:f103|            ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f103                    ; work         ;
+;       |FA:f104|            ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f104                    ; work         ;
+;       |FA:f105|            ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f105                    ; work         ;
+;       |FA:f106|            ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f106                    ; work         ;
+;       |FA:f107|            ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f107                    ; work         ;
+;       |FA:f108|            ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f108                    ; work         ;
+;       |FA:f109|            ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f109                    ; work         ;
+;       |FA:f10|             ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f10                     ; work         ;
+;       |FA:f110|            ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f110                    ; work         ;
+;       |FA:f111|            ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f111                    ; work         ;
+;       |FA:f112|            ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f112                    ; work         ;
+;       |FA:f113|            ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f113                    ; work         ;
+;       |FA:f114|            ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f114                    ; work         ;
+;       |FA:f115|            ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f115                    ; work         ;
+;       |FA:f116|            ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f116                    ; work         ;
+;       |FA:f117|            ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f117                    ; work         ;
+;       |FA:f118|            ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f118                    ; work         ;
+;       |FA:f119|            ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f119                    ; work         ;
+;       |FA:f11|             ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f11                     ; work         ;
+;       |FA:f120|            ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f120                    ; work         ;
+;       |FA:f121|            ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f121                    ; work         ;
+;       |FA:f122|            ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f122                    ; work         ;
+;       |FA:f123|            ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f123                    ; work         ;
+;       |FA:f124|            ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f124                    ; work         ;
+;       |FA:f125|            ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f125                    ; work         ;
+;       |FA:f12|             ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f12                     ; work         ;
+;       |FA:f13|             ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f13                     ; work         ;
+;       |FA:f14|             ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f14                     ; work         ;
+;       |FA:f15|             ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f15                     ; work         ;
+;       |FA:f16|             ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f16                     ; work         ;
+;       |FA:f17|             ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f17                     ; work         ;
+;       |FA:f18|             ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f18                     ; work         ;
+;       |FA:f19|             ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f19                     ; work         ;
+;       |FA:f1|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f1                      ; work         ;
+;       |FA:f202|            ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f202                    ; work         ;
+;       |FA:f203|            ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f203                    ; work         ;
+;       |FA:f204|            ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f204                    ; work         ;
+;       |FA:f205|            ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f205                    ; work         ;
+;       |FA:f206|            ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f206                    ; work         ;
+;       |FA:f207|            ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f207                    ; work         ;
+;       |FA:f208|            ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f208                    ; work         ;
+;       |FA:f209|            ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f209                    ; work         ;
+;       |FA:f20|             ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f20                     ; work         ;
+;       |FA:f210|            ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f210                    ; work         ;
+;       |FA:f211|            ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f211                    ; work         ;
+;       |FA:f212|            ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f212                    ; work         ;
+;       |FA:f213|            ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f213                    ; work         ;
+;       |FA:f214|            ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f214                    ; work         ;
+;       |FA:f21|             ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f21                     ; work         ;
+;       |FA:f22|             ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f22                     ; work         ;
+;       |FA:f23|             ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f23                     ; work         ;
+;       |FA:f24|             ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f24                     ; work         ;
+;       |FA:f25|             ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f25                     ; work         ;
+;       |FA:f26|             ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f26                     ; work         ;
+;       |FA:f27|             ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f27                     ; work         ;
+;       |FA:f28|             ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f28                     ; work         ;
+;       |FA:f29|             ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f29                     ; work         ;
+;       |FA:f2|              ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f2                      ; work         ;
+;       |FA:f301|            ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f301                    ; work         ;
+;       |FA:f302|            ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f302                    ; work         ;
+;       |FA:f304|            ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f304                    ; work         ;
+;       |FA:f305|            ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f305                    ; work         ;
+;       |FA:f306|            ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f306                    ; work         ;
+;       |FA:f307|            ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f307                    ; work         ;
+;       |FA:f308|            ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f308                    ; work         ;
+;       |FA:f309|            ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f309                    ; work         ;
+;       |FA:f30|             ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f30                     ; work         ;
+;       |FA:f310|            ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f310                    ; work         ;
+;       |FA:f31|             ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f31                     ; work         ;
+;       |FA:f32|             ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f32                     ; work         ;
+;       |FA:f33|             ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f33                     ; work         ;
+;       |FA:f34|             ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f34                     ; work         ;
+;       |FA:f35|             ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f35                     ; work         ;
+;       |FA:f36|             ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f36                     ; work         ;
+;       |FA:f37|             ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f37                     ; work         ;
+;       |FA:f38|             ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f38                     ; work         ;
+;       |FA:f39|             ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f39                     ; work         ;
+;       |FA:f3|              ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f3                      ; work         ;
+;       |FA:f402|            ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f402                    ; work         ;
+;       |FA:f403|            ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f403                    ; work         ;
+;       |FA:f404|            ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f404                    ; work         ;
+;       |FA:f405|            ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f405                    ; work         ;
+;       |FA:f406|            ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f406                    ; work         ;
+;       |FA:f40|             ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f40                     ; work         ;
+;       |FA:f4|              ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f4                      ; work         ;
+;       |FA:f501|            ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f501                    ; work         ;
+;       |FA:f5|              ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f5                      ; work         ;
+;       |FA:f6|              ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f6                      ; work         ;
+;       |FA:f7|              ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f7                      ; work         ;
+;       |FA:f8|              ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f8                      ; work         ;
+;       |FA:f9|              ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|FA:f9                      ; work         ;
+;       |HA:H10|             ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|HA:H10                     ; work         ;
+;       |HA:H11|             ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|HA:H11                     ; work         ;
+;       |HA:H13|             ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|HA:H13                     ; work         ;
+;       |HA:H15|             ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|HA:H15                     ; work         ;
+;       |HA:H1|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|HA:H1                      ; work         ;
+;       |HA:H2|              ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|HA:H2                      ; work         ;
+;       |HA:H3|              ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|HA:H3                      ; work         ;
+;       |HA:H4|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|HA:H4                      ; work         ;
+;       |HA:H6|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|HA:H6                      ; work         ;
+;       |HA:H7|              ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|HA:H7                      ; work         ;
+;       |HA:H8|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|HA:H8                      ; work         ;
+;       |HA:H9|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|HA:H9                      ; work         ;
+;       |RCA24:RC0|          ; 31 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|RCA24:RC0                  ; work         ;
+;          |RCA12:R1|        ; 31 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|RCA24:RC0|RCA12:R1         ; work         ;
+;             |FA:F960|      ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|RCA24:RC0|RCA12:R1|FA:F960 ; work         ;
+;             |FA:F961|      ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|RCA24:RC0|RCA12:R1|FA:F961 ; work         ;
+;             |FA:F962|      ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|RCA24:RC0|RCA12:R1|FA:F962 ; work         ;
+;             |FA:F963|      ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|RCA24:RC0|RCA12:R1|FA:F963 ; work         ;
+;             |FA:F964|      ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|RCA24:RC0|RCA12:R1|FA:F964 ; work         ;
+;             |FA:F965|      ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|RCA24:RC0|RCA12:R1|FA:F965 ; work         ;
+;             |FA:F966|      ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|RCA24:RC0|RCA12:R1|FA:F966 ; work         ;
+;             |FA:F967|      ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|RCA24:RC0|RCA12:R1|FA:F967 ; work         ;
+;             |FA:F968|      ; 13 (13)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|RCA24:RC0|RCA12:R1|FA:F968 ; work         ;
+;             |FA:H959|      ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Dutwrapper|Wallace:R1|RCA24:RC0|RCA12:R1|FA:H959 ; work         ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 49    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |Dutwrapper ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; N              ; 16    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Wallace:R1 ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; N              ; 16    ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "Wallace:R1|RCA24:RC0|RCA12:R1" ;
++------+-------+----------+---------------------------------+
+; Port ; Type  ; Severity ; Details                         ;
++------+-------+----------+---------------------------------+
+; Cin  ; Input ; Info     ; Stuck at GND                    ;
++------+-------+----------+---------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Wallace:R1"                                                                                                                ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                    ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
+; Mul  ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (17 bits) it drives; bit(s) "Mul[31..17]" have no fanouts ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:08     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Aug 20 18:17:41 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Wallace -c Wallace
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 5 design units, including 5 entities, in source file wallace.v
+    Info (12023): Found entity 1: Wallace
+    Info (12023): Found entity 2: RCA24
+    Info (12023): Found entity 3: RCA12
+    Info (12023): Found entity 4: HA
+    Info (12023): Found entity 5: FA
+Info (12021): Found 1 design units, including 1 entities, in source file testbench.v
+    Info (12023): Found entity 1: testbench
+Info (12021): Found 1 design units, including 1 entities, in source file dutwrapper.v
+    Info (12023): Found entity 1: Dutwrapper
+Info (12127): Elaborating entity "Dutwrapper" for the top level hierarchy
+Info (12128): Elaborating entity "Wallace" for hierarchy "Wallace:R1"
+Info (12128): Elaborating entity "HA" for hierarchy "Wallace:R1|HA:H1"
+Info (12128): Elaborating entity "FA" for hierarchy "Wallace:R1|FA:f1"
+Info (12128): Elaborating entity "RCA24" for hierarchy "Wallace:R1|RCA24:RC0"
+Info (12128): Elaborating entity "RCA12" for hierarchy "Wallace:R1|RCA24:RC0|RCA12:R1"
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 305 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 33 input pins
+    Info (21059): Implemented 17 output pins
+    Info (21061): Implemented 255 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4649 megabytes
+    Info: Processing ended: Fri Aug 20 18:17:56 2021
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:08
+
+
