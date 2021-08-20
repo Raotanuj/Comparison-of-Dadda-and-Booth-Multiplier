@@ -1,0 +1,147 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/DELL Anu/Anurag Desktop/IIT B/Project/Verilog/Wallace/16 bit Wallace/simulation/modelsim
+vFA
+Z1 !s110 1629352373
+!i10b 1
+!s100 il]j]C2k:cobmX0c8Xbk33
+I[LjfI0g=lGRb`WaGcBnFO0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1628986564
+Z4 8D:/DELL Anu/Anurag Desktop/IIT B/Project/Verilog/Wallace/16 bit Wallace/Wallace.v
+Z5 FD:/DELL Anu/Anurag Desktop/IIT B/Project/Verilog/Wallace/16 bit Wallace/Wallace.v
+L0 731
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1629352372.000000
+Z8 !s107 D:/DELL Anu/Anurag Desktop/IIT B/Project/Verilog/Wallace/16 bit Wallace/Wallace.v|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/DELL Anu/Anurag Desktop/IIT B/Project/Verilog/Wallace/16 bit Wallace|D:/DELL Anu/Anurag Desktop/IIT B/Project/Verilog/Wallace/16 bit Wallace/Wallace.v|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work {+incdir+D:/DELL Anu/Anurag Desktop/IIT B/Project/Verilog/Wallace/16 bit Wallace}
+Z12 tCvgOpt 0
+n@f@a
+vHA
+R1
+!i10b 1
+!s100 <j5go:=jB9dBn[<GbcMAK1
+I@kYkMC>f^]h@@k:H]QnaG1
+R2
+R0
+R3
+R4
+R5
+L0 719
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@h@a
+vRCA12
+R1
+!i10b 1
+!s100 _@a4PNfL8dL`nX:NX3<;E0
+I9Eb2nO@UE[97MZa^SjCB:2
+R2
+R0
+R3
+R4
+R5
+L0 692
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@r@c@a12
+vRCA24
+R1
+!i10b 1
+!s100 ^B@=JS?VUf^nbW6M_cXoN1
+I?i0Z15J;HS@jCKN6^O0mS3
+R2
+R0
+R3
+R4
+R5
+L0 681
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@r@c@a24
+vtestbench
+R1
+!i10b 1
+!s100 P=7zT2An_fU42lUNl==;10
+IW53cVCW:Ie`zZVT:;cDAY3
+R2
+R0
+w1629352353
+8D:/DELL Anu/Anurag Desktop/IIT B/Project/Verilog/Wallace/16 bit Wallace/testbench.v
+FD:/DELL Anu/Anurag Desktop/IIT B/Project/Verilog/Wallace/16 bit Wallace/testbench.v
+L0 2
+R6
+r1
+!s85 0
+31
+!s108 1629352373.000000
+!s107 D:/DELL Anu/Anurag Desktop/IIT B/Project/Verilog/Wallace/16 bit Wallace/testbench.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/DELL Anu/Anurag Desktop/IIT B/Project/Verilog/Wallace/16 bit Wallace|D:/DELL Anu/Anurag Desktop/IIT B/Project/Verilog/Wallace/16 bit Wallace/testbench.v|
+!i113 1
+R10
+R11
+R12
+vWallace
+R1
+!i10b 1
+!s100 XLV7C1>Y`P_Z<fMM^EDdX2
+I?M^FDNa:K3V0<IPIY8h7i1
+R2
+R0
+R3
+R4
+R5
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@wallace
