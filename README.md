@@ -1,1 +1,1 @@
-# Comparison-of-Dadda-and-Booth-Multiplier
+# Comparison-of-Dadda-and-Wallace-Multiplier
